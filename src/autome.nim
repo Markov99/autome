@@ -70,13 +70,13 @@ let
   ##   keyboard
   ##     .send("hello")
 
-include modules.imports
-include modules.common
-include modules.window
-include modules.mouse
-include modules.keyboard
-include modules.hotkey
-include modules.notify
+include autome.imports
+include autome.common
+include autome.window
+include autome.mouse
+include autome.keyboard
+include autome.hotkey
+include autome.notify
 
 when isMainModule:
   import strutils
