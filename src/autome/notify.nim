@@ -16,7 +16,7 @@ proc registerNotify*(): bool =
     return false
   return 1 == shellNotifyIconA(NIM_SETVERSION, data.addr)
 
-proc notify*(msg: string, title, tip: string = nil): bool {.discardable.} =
+proc notify*(msg: cstring, title, tip: cstring = nil): bool {.discardable.} =
   ## sends notification to Windows desktop notification area. Maximum string
   ## length for ``msg`` is 255, for ``title`` - 64, for ``tip`` - 128. Before
   ## calling this proc you should call
