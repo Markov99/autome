@@ -2,7 +2,7 @@
 
 import macros
 
-macro mouseAction(s: expr): expr =
+macro mouseAction(s: untyped): untyped =
   ## adds ``execActionWait(mouseCtx)`` and ``mouseCtx`` to the end of the proc.
   ## This results in calling ``execActionWait`` proc and returning
   ## ``mouseCtx`` from proc. This macro should be added to "mouse action" procs
